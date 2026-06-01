@@ -54,14 +54,43 @@ select * from orders;
 -- selecting only individual Columns
 select customerid, Firstname, lastname from customer;
 
+-- whera clause
+select * from customer where city = "New York"; 
+
+select * from customer where city like "Lo%";
+
+-- Order by
+select * from customer order by city desc; 
+
+-- Nested Column Query 
+select * from customer order by firstname asc,city desc; 
+
+ALTER TABLE Customer
+ADD Score INT;
+
+UPDATE Customer SET Score = 85 WHERE CustomerID = 1;
+UPDATE Customer SET Score = 92 WHERE CustomerID = 2;
+UPDATE Customer SET Score = 78 WHERE CustomerID = 3;
+UPDATE Customer SET Score = 88 WHERE CustomerID = 4;
+UPDATE Customer SET Score = 95 WHERE CustomerID = 5;
+UPDATE Customer SET Score = 81 WHERE CustomerID = 6;
+UPDATE Customer SET Score = 74 WHERE CustomerID = 7;
+UPDATE Customer SET Score = 90 WHERE CustomerID = 8;
+UPDATE Customer SET Score = 87 WHERE CustomerID = 9;
+UPDATE Customer SET Score = 93 WHERE CustomerID = 10;
+
+select * from customer;
+
+-- sort the result by city and the highest score
+ALTER TABLE Customer;
+UPDATE Customer SET city ="Chicago" WHERE CustomerID = 5;
+
+select * from customer order by city , score desc;
 
 
-
-
-
-
-
-
-
-
+-- GRoup by
+-- Find the total score for each city
+ 
+select city, sum(score) as Total_scores from customer 
+group by city;
 
