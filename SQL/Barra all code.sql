@@ -94,3 +94,28 @@ select * from customer order by city , score desc;
 select city, sum(score) as Total_scores from customer 
 group by city;
 
+-- Find the TOtal score and total number of customers for eact city
+select sum(score) as Total_Scores , count(customerid) as Total_Customers , city from customer group by city; 
+
+
+-- find the total score for each city having score greater than the 90
+select sum(score) as Total_Score,city from customer
+where Score > 50
+group by city
+having sum(score) >100;
+
+
+-- Find the Average score for each country
+-- considering onlyt customers with a score not equal to 0
+
+select customerid, firstname , city,
+avg(score) as avg_score from customer
+where score !=0
+group by customerid, firstname, city
+having avg_score >90;
+
+-- disinct 
+select distinct city from customer;
+
+-- limit clause or TOp 
+select * from customer limit 3;  
