@@ -118,4 +118,21 @@ having avg_score >90;
 select distinct city from customer;
 
 -- limit clause or TOp 
-select * from customer limit 3;  
+select * from customer limit 3;
+
+--  Retrive the top 3 customer with the highest score
+select * from customer 
+order by score 
+limit 3;  
+
+--  Retrive the top 2 customer with the lowest score
+
+select * from customer order by score asc
+limit 2;
+
+-- Getr the 2 Most Recent Orders
+
+select * from Orders
+order by orderdate desc limit 2;
+
+
