@@ -135,4 +135,44 @@ limit 2;
 select * from Orders
 order by orderdate desc limit 2;
 
+select * from orders;				
+select * from customer;			-- Here WE cannot Run Both Queries at one TIme   
+
+
+-- Here Creating a Static values 
+select 123 as Static_Value;
+
+-- we can add our static data to the database
+
+select customerid,firstname, 
+"New Customer" as Customer_type
+from customer; 
+
+
+-- DDL Data DEfination Language
+
+-- creating a table called Persons with column Id, person name , birthdate, phone
+
+create table Persons (
+Id Int Not null,
+Person_Name varchar(50) Not Null,
+Birth_Date Date,
+Phone varchar(15) Not Null,
+constraint PK_Persons Primary Key (Id)
+)   ;
+
+
+--  Alter
+ALter Table Persons 
+Add Email varchar(50) Not Null;
+select * from persons;
+
+
+-- Drop or Droping a Colunmn
+ALter TAble Persons
+Drop column Phone ; 
+select * from Persons;
+
+drop table persons;
+
 
