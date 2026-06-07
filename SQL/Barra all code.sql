@@ -155,24 +155,87 @@ from customer;
 
 create table Persons (
 Id Int Not null,
-Person_Name varchar(50) Not Null,
+FirstName varchar(50) Not Null,
+LastName varchar(50) Not Null,
 Birth_Date Date,
 Phone varchar(15) Not Null,
 constraint PK_Persons Primary Key (Id)
 )   ;
 
 
---  Alter
+--  TASk Alter
 ALter Table Persons 
 Add Email varchar(50) Not Null;
 select * from persons;
 
 
--- Drop or Droping a Colunmn
+-- TAsk Drop or Droping a Colunmn
 ALter TAble Persons
 Drop column Phone ; 
 select * from Persons;
 
-drop table persons;
+-- drop table persons;
 
 
+-- Inserting Data Into TAble
+-- Insert 
+
+select * from customer;
+Insert into customer (customerid, Firstname, lastname, Email,phone, City, Score)
+Values (11,"Sam","Smueal","sam1234@gmail.com","1234567890","New York",Null),
+(12,"Anna","Mul","anna1234@gmail.com","0987654321",Null,80)
+;
+Insert into customer (customerid, Firstname, lastname, Email,phone, City, Score)
+Values (13,"Sami","ssv","smi1234@gmail.com","17774567890","New York",Null);
+
+-- TASk  COpy Data from Customers table into persons
+ 
+  
+ select * from Persons;
+
+Insert Into Persons(Id,Firstname, Lastname,Birth_date,phone)
+select customerid, firstname, lastname,Null,phone 
+from customer;
+
+-- Task Change the SCore of the Customer with Id 6 to 0
+
+select * from customer; 
+
+update customer
+Set Score =0
+Where customerid =11;
+
+-- TAsk Change the score of customer id 12 to 0 and updae the city to "GB"
+select * from Customer; 
+
+Update Customer
+set score =0,
+	city="GB"
+where customerid =12;
+select * from customer;
+
+-- TAsk Update all customer with a null score by setting their score to 0
+
+update customer
+set Score = 0  
+where Score is Null;
+
+select * from customer;
+
+-- Delete 
+
+-- TAsk delete the all customer whose IOd is greater than 5
+ 
+delete from customer
+where customerid >10;
+select * from customer;
+
+-- TAsk Delete all Data from persons table
+select * from persons;
+-- delete from persons;  -- It is slower
+
+
+-- Use Truncate
+
+truncate table persons;
+select * from persons; 
