@@ -239,3 +239,13 @@ select * from persons;
 
 truncate table persons;
 select * from persons; 
+
+
+
+
+
+
+
+
+
+
