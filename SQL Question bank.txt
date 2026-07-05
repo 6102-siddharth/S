@@ -1,3 +1,234 @@
+-- ==========================================
+-- DATABASE Datasetsa & questions
+-- ==========================================
+
+DROP DATABASE IF EXISTS company_db;
+CREATE DATABASE company_db;
+USE company_db;
+
+-- ==========================================
+-- DEPARTMENTS
+-- ==========================================
+
+CREATE TABLE departments(
+    department_id INT PRIMARY KEY AUTO_INCREMENT,
+    department_name VARCHAR(50) NOT NULL UNIQUE,
+    location VARCHAR(50)
+);
+
+INSERT INTO departments(department_name,location) VALUES
+('HR','New York'),
+('IT','California'),
+('Finance','Chicago'),
+('Marketing','Texas'),
+('Sales','Florida'),
+('Admin','Boston');
+
+-- ==========================================
+-- JOBS
+-- ==========================================
+
+CREATE TABLE jobs(
+    job_id INT PRIMARY KEY AUTO_INCREMENT,
+    job_title VARCHAR(50),
+    min_salary DECIMAL(10,2),
+    max_salary DECIMAL(10,2)
+);
+
+INSERT INTO jobs(job_title,min_salary,max_salary) VALUES
+('Manager',70000,150000),
+('Developer',40000,120000),
+('Tester',35000,90000),
+('HR Executive',30000,70000),
+('Sales Executive',30000,90000),
+('Accountant',35000,85000);
+
+-- ==========================================
+-- EMPLOYEES
+-- ==========================================
+
+CREATE TABLE employees(
+    employee_id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    gender CHAR(1),
+    email VARCHAR(100) UNIQUE,
+    phone VARCHAR(15),
+    hire_date DATE,
+    salary DECIMAL(10,2),
+    bonus DECIMAL(10,2) DEFAULT 0,
+    commission DECIMAL(10,2),
+    manager_id INT,
+    department_id INT,
+    job_id INT,
+    status VARCHAR(20) DEFAULT 'Active',
+
+    FOREIGN KEY(manager_id) REFERENCES employees(employee_id),
+    FOREIGN KEY(department_id) REFERENCES departments(department_id),
+    FOREIGN KEY(job_id) REFERENCES jobs(job_id)
+);
+
+INSERT INTO employees
+(first_name,last_name,gender,email,phone,hire_date,salary,bonus,commission,manager_id,department_id,job_id)
+VALUES
+
+('John','Smith','M','john@gmail.com','1111111111','2020-01-10',90000,10000,5000,NULL,2,1),
+
+('David','Wilson','M','david@gmail.com','2222222222','2021-02-20',70000,5000,2000,1,2,2),
+
+('Emma','Brown','F','emma@gmail.com','3333333333','2019-05-14',75000,8000,NULL,1,3,6),
+
+('Sophia','Miller','F','sophia@gmail.com','4444444444','2022-03-21',50000,2000,1000,2,2,2),
+
+('James','Taylor','M','james@gmail.com','5555555555','2018-08-18',120000,15000,7000,NULL,2,1),
+
+('Olivia','Johnson','F','olivia@gmail.com','6666666666','2023-01-05',45000,1500,NULL,5,4,4),
+
+('Daniel','Lee','M','daniel@gmail.com','7777777777','2022-09-11',55000,2500,1200,5,5,5),
+
+('Ava','Martin','F','ava@gmail.com','8888888888','2020-07-09',65000,3500,NULL,1,3,6),
+
+('Michael','White','M','michael@gmail.com','9999999999','2021-04-12',48000,2000,500,2,5,5),
+
+('Charlotte','King','F','charlotte@gmail.com','1010101010','2019-11-30',60000,4000,NULL,5,6,4),
+
+('William','Hall','M','william@gmail.com','1212121212','2022-12-15',70000,5000,2000,1,2,2),
+
+('Mia','Young','F','mia@gmail.com','1313131313','2024-02-11',42000,1000,NULL,2,4,4);
+
+-- ==========================================
+-- CUSTOMERS
+-- ==========================================
+
+CREATE TABLE customers(
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_name VARCHAR(100),
+    city VARCHAR(50),
+    country VARCHAR(50),
+    phone VARCHAR(20),
+    email VARCHAR(100)
+);
+
+INSERT INTO customers(customer_name,city,country,phone,email) VALUES
+('ABC Pvt Ltd','New York','USA','111','abc@gmail.com'),
+('XYZ Ltd','Chicago','USA','222','xyz@gmail.com'),
+('Global Tech','London','UK','333','global@gmail.com'),
+('Prime Retail','Toronto','Canada','444','prime@gmail.com'),
+('Vision Corp','Sydney','Australia','555','vision@gmail.com');
+
+-- ==========================================
+-- PRODUCTS
+-- ==========================================
+
+CREATE TABLE products(
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    product_name VARCHAR(100),
+    category VARCHAR(50),
+    price DECIMAL(10,2),
+    stock INT
+);
+
+INSERT INTO products(product_name,category,price,stock) VALUES
+('Laptop','Electronics',65000,50),
+('Mouse','Electronics',700,250),
+('Keyboard','Electronics',1200,150),
+('Monitor','Electronics',15000,40),
+('Printer','Electronics',11000,20),
+('Chair','Furniture',5000,80),
+('Table','Furniture',8000,35);
+
+-- ==========================================
+-- ORDERS
+-- ==========================================
+
+CREATE TABLE orders(
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT,
+    employee_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10,2),
+
+    FOREIGN KEY(customer_id) REFERENCES customers(customer_id),
+    FOREIGN KEY(employee_id) REFERENCES employees(employee_id)
+);
+
+INSERT INTO orders(customer_id,employee_id,order_date,total_amount) VALUES
+(1,7,'2024-01-10',65700),
+(2,4,'2024-01-12',15000),
+(3,9,'2024-02-01',72000),
+(1,7,'2024-03-14',8200),
+(5,10,'2024-03-25',16000),
+(4,9,'2024-04-11',9000);
+
+-- ==========================================
+-- ORDER DETAILS
+-- ==========================================
+
+CREATE TABLE order_details(
+    order_detail_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT,
+    product_id INT,
+    quantity INT,
+    unit_price DECIMAL(10,2),
+
+    FOREIGN KEY(order_id) REFERENCES orders(order_id),
+    FOREIGN KEY(product_id) REFERENCES products(product_id)
+);
+
+INSERT INTO order_details(order_id,product_id,quantity,unit_price) VALUES
+(1,1,1,65000),
+(1,2,1,700),
+(2,4,1,15000),
+(3,1,1,65000),
+(3,3,2,1200),
+(3,2,5,700),
+(4,7,1,8000),
+(5,5,1,11000),
+(5,6,1,5000),
+(6,6,1,5000),
+(6,3,2,1200);
+
+-- ==========================================
+-- PAYMENTS
+-- ==========================================
+
+CREATE TABLE payments(
+    payment_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT,
+    payment_date DATE,
+    payment_method VARCHAR(30),
+    amount DECIMAL(10,2),
+
+    FOREIGN KEY(order_id) REFERENCES orders(order_id)
+);
+
+INSERT INTO payments(order_id,payment_date,payment_method,amount) VALUES
+(1,'2024-01-10','Credit Card',65700),
+(2,'2024-01-12','Cash',15000),
+(3,'2024-02-02','UPI',72000),
+(4,'2024-03-15','Credit Card',8200),
+(5,'2024-03-25','UPI',16000),
+(6,'2024-04-12','Cash',9000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 MySQL Question Bank (0 → Advanced)
 
 Level 1: Introduction to Databases
