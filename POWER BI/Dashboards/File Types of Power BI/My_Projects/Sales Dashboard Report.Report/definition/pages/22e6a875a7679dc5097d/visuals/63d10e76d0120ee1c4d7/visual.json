@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "63d10e76d0120ee1c4d7",
+  "position": {
+    "x": 649.05877820399007,
+    "y": 115.26625236603628,
+    "z": 1,
+    "height": 563.98130621953464,
+    "width": 548.88691602874428,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "kpi",
+    "query": {
+      "queryState": {
+        "Indicator": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "customers_manual"
+                        }
+                      },
+                      "Property": "CustomerID"
+                    }
+                  },
+                  "Function": 5
+                }
+              },
+              "queryRef": "CountNonNull(customers_manual.CustomerID)",
+              "nativeQueryRef": "Count of CustomerID"
+            }
+          ]
+        },
+        "TrendLine": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "customers_manual"
+                    }
+                  },
+                  "Property": "LoyaltyLevel"
+                }
+              },
+              "queryRef": "customers_manual.LoyaltyLevel",
+              "nativeQueryRef": "LoyaltyLevel"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "customers_manual"
+                      }
+                    },
+                    "Property": "CustomerID"
+                  }
+                },
+                "Function": 5
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "277f0714495dd68b4ffa",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "customers_manual"
+              }
+            },
+            "Property": "LoyaltyLevel"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "c7bb9b64cf46924ee4b1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "customers_manual"
+                  }
+                },
+                "Property": "CustomerID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
