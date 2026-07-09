@@ -1,0 +1,69 @@
+table products_manual
+	lineageTag: 84566da8-b528-4647-9626-d5b1eb434638
+
+	column ProductID
+		dataType: int64
+		formatString: 0
+		lineageTag: 44272fa4-364b-43ce-8a69-dc190789f006
+		summarizeBy: count
+		sourceColumn: ProductID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: f764ba34-44d4-4f07-89ce-64a28961ec80
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategory
+		dataType: string
+		lineageTag: 495d29ac-59f5-40ed-bb84-6040f8de5cfa
+		summarizeBy: none
+		sourceColumn: SubCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightKg
+		dataType: double
+		lineageTag: 09fa4a56-dc77-45ec-bffe-17b6e145b5e0
+		summarizeBy: sum
+		sourceColumn: WeightKg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column IsDiscontinued
+		dataType: string
+		lineageTag: 90eec814-2b3b-430a-af01-ae4362b2681a
+		summarizeBy: none
+		sourceColumn: IsDiscontinued
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rating
+		dataType: double
+		lineageTag: 0d6dd4ed-fbd8-4a96-8d54-3de83214c3d7
+		summarizeBy: sum
+		sourceColumn: Rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition products_manual = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\ABC\POWER BI\MAterials\powerbi-ultimate-course\powerbi-ultimate-course\datasets\02_connection_types\masterdata_extended_1.xlsx"), null, true),
+				    products_manual_Sheet = Source{[Item="products_manual",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(products_manual_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductID", Int64.Type}, {"Brand", type text}, {"SubCategory", type text}, {"WeightKg", type number}, {"IsDiscontinued", type text}, {"Rating", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

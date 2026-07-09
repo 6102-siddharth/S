@@ -257,27 +257,45 @@ select * from orders;
 select * from payments;
 
 -- 11. Display unique department IDs from employees.
-
+select distinct department_id from employees;
 
 -- 12. Display unique cities from customers.
-
+select distinct city from customers;
 
 -- 13. Display employee names with salaries.
-
+select concat(first_name,last_name) as EMP_name , salary from employees;
 
 -- 14. Display all employee emails.
-
+select  email from employees;
 
 -- 15. Display all product categories.
+select Product_id, Category from products;
+
 -- 16. Display employee names and hire dates.
+select concat(first_name, last_name) as EMP_name , hire_date 
+from employees ;
+
+select * from customers;
+select * from departments;
+select * from employees;
+select * from jobs;
+select * from order_details;
+select * from orders;
+select * from payments;
+select * from products;
+
+
 -- 17. Display customer names and countries.
+select customer_name, country from customers;
+
 -- 18. Display all managers.
+select manager_id from employees;
+
 -- 19. Display order amounts.
+select sum(Total_amount) as Total_Amounts from orders;
+
 -- 20. Display employee IDs in ascending order.
-
-
-
-
+select employee_id from employees order by employee_id asc;
 
 
 
