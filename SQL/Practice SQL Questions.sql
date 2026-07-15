@@ -364,30 +364,78 @@ select * from payments where payment_Method = "Cash";
 
 
 
+
+select * from customers;
+select * from departments;
+select * from employees;
+select * from jobs;
+select * from order_details;
+select * from orders;
+select * from payments;
+select * from products;
+
+
 -- 3. Comparison Operators (=, <>, >, <, >=, <=) (20 Questions)
 
 -- 1. Salary = 70000
-
+select * from employees where salary = 70000;
 
 -- 2. Salary <> 70000
+select * from employees where salary <> 70000;
+
 -- 3. Salary > 60000
+select * from employees where salary > 60000;
+
 -- 4. Salary < 60000
+select * from employees where salary < 60000;
+
 -- 5. Salary >= 50000
+select * from employees where salary >= 50000;
+
 -- 6. Salary <= 50000
+select * from employees where salary <= 50000;
+
 -- 7. Stock >100
+select * from products where stock > 100;
+
 -- 8. Stock <50
+select * from products where stock < 50;
+
 -- 9. Orders >=15000
+select *,(unit_price * quantity)  as orders  from order_details where (unit_price * quantity) >= 15000;
+
 -- 10. Orders <=9000
+select *, (unit_price * quantity) as orders from order_details  where (unit_price * quantity) <= 9000;
+
 -- 11. Price=65000
+select * from order_details where unit_price = 65000;
+
 -- 12. Price<>700
+select * from order_details where unit_price <> 700; 
+
 -- 13. Department=IT
+select * from departments where department_name = "IT";
+
 -- 14. Customer country=UK
+select * from customers where country = "UK";
+
 -- 15. Employee ID>5
+select * from employees where Employee_ID >5;
+
 -- 16. Employee ID<10
+select * from employees where EMployee_id >10;
+
 -- 17. Bonus>=5000
+select * from employees where bonus >=5000;
+
 -- 18. Commission<=1000
+select * from employees where commission <= 1000;
+
 -- 19. Hire date>2022
+select * from employees where Hire_date > "2023-01-01";
+
 -- 20. Hire date<2021
+select *from employees where hire_date < "2022-01-01";
 
 
 
