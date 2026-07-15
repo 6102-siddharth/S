@@ -317,20 +317,54 @@ select * from employees where gender = "F";
 select * from employees where Gender = "M";
 
 -- 6. Products costing more than 10000.
+select * from products where price > 10000;
+
 -- 7. Products with stock less than 50.
+select * from products where stock < 50;
+
+
 -- 8. Customers from USA.
+select * from customers where country ="USA";
+
 -- 9. Employees hired after 2022.
+select * from employees where hire_date > "2022-01-01";
+
 -- 10. Employees hired before 2021.
+select * from employees where hire_date <"2021-01-01";
+
 -- 11. Orders above 20000.
+select * from orders where total_amount > 20000;
+
 -- 12. Orders below 10000.
+select * from orders where total_amount < 10000;
+
 -- 13. Employees whose bonus is greater than 3000.
+select * from employees where bonus > 3000;
+
 -- 14. Employees with NULL commission.
+select * from employees where commission is Null;
+
 -- 15. Employees whose commission is NOT NULL.
+select * from employees where commission is not Null;
+
 -- 16. Customers from Canada.
+select * from customers where country = "Canada";
+
 -- 17. Employees with salary equal to 70000.
+select * from employees where salary = 70000;
+
 -- 18. Products in Furniture category.
+select * from products where category = "Furniture";
+
 -- 19. Employees with status Active.
+select * from employees where status = "active";
+
 -- 20. Payments made by Cash.
+select * from payments where payment_Method = "Cash";
+
+
+
+
 
 
 
