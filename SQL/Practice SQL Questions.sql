@@ -364,6 +364,32 @@ select * from payments where payment_Method = "Cash";
 
 
 
+-- 3. Comparison Operators (=, <>, >, <, >=, <=) (20 Questions)
+
+-- 1. Salary = 70000
+
+
+-- 2. Salary <> 70000
+-- 3. Salary > 60000
+-- 4. Salary < 60000
+-- 5. Salary >= 50000
+-- 6. Salary <= 50000
+-- 7. Stock >100
+-- 8. Stock <50
+-- 9. Orders >=15000
+-- 10. Orders <=9000
+-- 11. Price=65000
+-- 12. Price<>700
+-- 13. Department=IT
+-- 14. Customer country=UK
+-- 15. Employee ID>5
+-- 16. Employee ID<10
+-- 17. Bonus>=5000
+-- 18. Commission<=1000
+-- 19. Hire date>2022
+-- 20. Hire date<2021
+
+
 
 
 
