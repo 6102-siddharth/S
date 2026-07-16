@@ -438,7 +438,40 @@ select * from employees where Hire_date > "2023-01-01";
 select *from employees where hire_date < "2022-01-01";
 
 
+select * from customers;
+select * from departments;
+select * from employees;
+select * from jobs;
+select * from order_details;
+select * from orders;
+select * from payments;
+select * from products;
 
+
+-- 4. Logical Operators (AND OR NOT) (20 Questions)
+
+-- 1. Salary >50000 AND department=2
+
+
+-- 2. Salary >50000 OR department=3
+-- 3. NOT department=2
+-- 4. Female AND salary>60000
+-- 5. Male OR salary<50000
+-- 6. Product price>10000 AND stock<50
+-- 7. Customer from USA AND city=Chicago
+-- 8. Orders >10000 AND employee=7
+-- 9. Bonus>2000 OR commission>1000
+-- 10. NOT country='USA'
+-- 11. Salary>50000 AND hire_date>'2021-01-01'
+-- 12. Price<10000 OR category='Furniture'
+-- 13. Department=2 AND job=2
+-- 14. Department=2 OR job=1
+-- 15. Bonus>3000 AND commission IS NULL
+-- 16. Stock>30 AND price<10000
+-- 17. Customer city='London' OR country='Canada'
+-- 18. Hire_date<'2022' AND salary>60000
+-- 19. Payment='Cash' AND amount>10000
+-- 20. Payment='UPI' OR amount<10000
 
 
 
