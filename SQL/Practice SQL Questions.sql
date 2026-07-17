@@ -451,19 +451,43 @@ select * from products;
 -- 4. Logical Operators (AND OR NOT) (20 Questions)
 
 -- 1. Salary >50000 AND department=2
-
+select * from employees where salary > 50000 AND department_id =2;
 
 -- 2. Salary >50000 OR department=3
+select * from employees where salary > 50000 OR department_id =3;
+
 -- 3. NOT department=2
+select * from departments where department_id !=2;
+
+select * from employees where department_id !=2;
+
 -- 4. Female AND salary>60000
+select * from employees where gender ="F" AND Salary > 60000;
+
 -- 5. Male OR salary<50000
+select * from employees where gender ="M" AND Salary < 50000;
+
 -- 6. Product price>10000 AND stock<50
+select * from products where price > 10000 ANd Stock < 50;
+
 -- 7. Customer from USA AND city=Chicago
+select * from customers where country = "USA" AND City ="Chicago";
+
 -- 8. Orders >10000 AND employee=7
+select * from orders where Total_amount > 10000 AND Employee_id =7;
+
 -- 9. Bonus>2000 OR commission>1000
+select * from employees where Bonus >2000 Or Commission >1000;
+
 -- 10. NOT country='USA'
+select * from customers where Country != "USA";
+
 -- 11. Salary>50000 AND hire_date>'2021-01-01'
+select * from employees where salary > 50000 AND Hire_date > '2021-01-01';
+
 -- 12. Price<10000 OR category='Furniture'
+
+
 -- 13. Department=2 AND job=2
 -- 14. Department=2 OR job=1
 -- 15. Bonus>3000 AND commission IS NULL
