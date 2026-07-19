@@ -486,6 +486,9 @@ select * from customers where Country != "USA";
 select * from employees where salary > 50000 AND Hire_date > '2021-01-01';
 
 -- 12. Price<10000 OR category='Furniture'
+select * from products where price < 10000 Or category = "Furniture";
+
+
 
 
 
