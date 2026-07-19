@@ -488,6 +488,8 @@ select * from employees where salary > 50000 AND Hire_date > '2021-01-01';
 -- 12. Price<10000 OR category='Furniture'
 
 
+
+
 -- 13. Department=2 AND job=2
 -- 14. Department=2 OR job=1
 -- 15. Bonus>3000 AND commission IS NULL
