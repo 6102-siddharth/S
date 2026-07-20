@@ -493,6 +493,10 @@ select * from products where price < 10000 Or category = "Furniture";
 
 
 
+
+
+
+
 -- 13. Department=2 AND job=2
 -- 14. Department=2 OR job=1
 -- 15. Bonus>3000 AND commission IS NULL
