@@ -488,19 +488,18 @@ select * from employees where salary > 50000 AND Hire_date > '2021-01-01';
 -- 12. Price<10000 OR category='Furniture'
 select * from products where price < 10000 Or category = "Furniture";
 
-
-
-
-
-
-
-
-
-
 -- 13. Department=2 AND job=2
+select * from employees where Department_id =2 AND Job_Id = 2;
+
 -- 14. Department=2 OR job=1
+select * from employees where Department_id =2 Or Job_Id = 1;
+
 -- 15. Bonus>3000 AND commission IS NULL
+select * from employees where Bonus > 3000 ANd Commission is null;
+
 -- 16. Stock>30 AND price<10000
+select * from products where stock > 30 AND Price < 10000;
+
 -- 17. Customer city='London' OR country='Canada'
 -- 18. Hire_date<'2022' AND salary>60000
 -- 19. Payment='Cash' AND amount>10000
