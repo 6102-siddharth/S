@@ -501,9 +501,17 @@ select * from employees where Bonus > 3000 ANd Commission is null;
 select * from products where stock > 30 AND Price < 10000;
 
 -- 17. Customer city='London' OR country='Canada'
+select * from customers where city = "London" Or COuntry = "Canada";
+
 -- 18. Hire_date<'2022' AND salary>60000
+select * from employees where Hire_date < "2022-12-31" ANd salary >60000;
+
 -- 19. Payment='Cash' AND amount>10000
+select * from payments where payment_method ="cash" AND Amount  >10000;
+
 -- 20. Payment='UPI' OR amount<10000
+select *from payments where payment_method ="UPI" Or Amount <10000;
+
 
 
 
