@@ -513,6 +513,31 @@ select * from payments where payment_method ="cash" AND Amount  >10000;
 select *from payments where payment_method ="UPI" Or Amount <10000;
 
 
+-- 5. LIKE Operator (20 Questions)
+
+-- 1. First name starts with J.
+
+
+
+-- 2. Last name starts with M.
+-- 3. Email contains gmail.
+-- 4. Customer names ending with Ltd.
+-- 5. Product names containing 'o'.
+-- 6. Employee names ending with 'a'.
+-- 7. Department names starting with M.
+-- 8. Job title containing 'Manager'.
+-- 9. Product names ending with r.
+-- 10. Country starts with U.
+-- 11. Employee first name second letter='a'.
+-- 12. Employee name contains 'li'.
+-- 13. Customer email ends with .com
+-- 14. Product contains 'top'
+-- 15. Job title ends with Executive
+-- 16. City starts with T
+-- 17. Phone begins with 1
+-- 18. First name has exactly 4 letters
+-- 19. Last name has exactly 5 letters
+-- 20. Product category starts with E
 
 
 
