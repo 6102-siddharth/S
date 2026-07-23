@@ -516,15 +516,26 @@ select *from payments where payment_method ="UPI" Or Amount <10000;
 -- 5. LIKE Operator (20 Questions)
 
 -- 1. First name starts with J.
-
-
+select * from employees where First_name like "J%";
 
 -- 2. Last name starts with M.
+select * from employees where Last_name  like "M%"; 
+
 -- 3. Email contains gmail.
+select * from employees where email like "%gmail%";
+
 -- 4. Customer names ending with Ltd.
+select * from customers where customer_name like "%Ltd";
+
 -- 5. Product names containing 'o'.
+select * from products where Product_name like "%o%";
+
 -- 6. Employee names ending with 'a'.
+select * from employees where first_name like "%a";
+
 -- 7. Department names starting with M.
+select * from departments where department_name like "M%";
+
 -- 8. Job title containing 'Manager'.
 -- 9. Product names ending with r.
 -- 10. Country starts with U.
