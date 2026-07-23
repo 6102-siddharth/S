@@ -537,18 +537,45 @@ select * from employees where first_name like "%a";
 select * from departments where department_name like "M%";
 
 -- 8. Job title containing 'Manager'.
+select * from jobs where Job_TItle = "Manager";
+
 -- 9. Product names ending with r.
+select * from products where product_name like "%r";
+
 -- 10. Country starts with U.
+select * from customers where COuntry like "U%";
+
 -- 11. Employee first name second letter='a'.
+select * from employees where first_name like "_a%";
+
 -- 12. Employee name contains 'li'.
+select * from employees where first_name like "%li%";
+
 -- 13. Customer email ends with .com
+select * from customers where email like "%.com";
+
 -- 14. Product contains 'top'
+select * from products where product_name like "%top%";
+
 -- 15. Job title ends with Executive
+select * from jobs where job_title like "%Executive%";
+
 -- 16. City starts with T
+select * from customers where city like "T%";
+
 -- 17. Phone begins with 1
+select * from employees where phone like "1%";
+
 -- 18. First name has exactly 4 letters
+select * from employees where char_length(first_name) = 4;
+
 -- 19. Last name has exactly 5 letters
+select * from employees where char_length(last_name)=5;
+
 -- 20. Product category starts with E
+select * from products where category  like  "E%"
+
+
 
 
 
