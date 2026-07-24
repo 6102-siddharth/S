@@ -573,7 +573,46 @@ select * from employees where char_length(first_name) = 4;
 select * from employees where char_length(last_name)=5;
 
 -- 20. Product category starts with E
-select * from products where category  like  "E%"
+select * from products where category  like  "E%";
+
+
+-- 6. BETWEEN (20 Questions)
+
+-- 1. Salary between 40000 and 70000.
+select * from employees where salary between 40000 AND 70000;
+
+-- 2. Bonus between 1000 and 5000.
+select * from employees where bonus between 1000 AND 5000;
+
+-- 3. Product price between 5000 and 20000.
+select * from products where price between 5000 ANd 20000;
+
+-- 4. Orders between 10000 and 70000.
+select * from orders  where total_amount between 10000 AND 70000;
+
+-- 5. Employees hired between 2020 and 2022.
+select * from employees where hire_date between "2020-01-01" AND "2022-12-31";
+
+-- 6. Stock between 20 and 80.
+select * from products where stock between 20 AND 80;
+
+-- 7. Commission between 500 and 2000.
+select * from employees where Commission Between 500 ANd 2000;
+
+-- 8. Employee ID between 3 and 10.
+-- 9. Customer ID between 2 and 4.
+-- 10. Payment amount between 8000 and 20000.
+-- 11. Salary NOT BETWEEN 40000 AND 70000.
+-- 12. Bonus BETWEEN 2000 AND 10000.
+-- 13. Price BETWEEN 1000 AND 15000.
+-- 14. Hire date BETWEEN Jan and Dec 2022.
+-- 15. Stock BETWEEN 30 AND 100.
+-- 16. Order date BETWEEN Jan and Mar.
+-- 17. Product ID BETWEEN 2 AND 5.
+-- 18. Department ID BETWEEN 2 AND 5.
+-- 19. Job ID BETWEEN 2 AND 6.
+-- 20. Quantity BETWEEN 1 AND 5.
+
 
 
 
