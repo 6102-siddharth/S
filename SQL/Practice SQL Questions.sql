@@ -600,16 +600,32 @@ select * from products where stock between 20 AND 80;
 select * from employees where Commission Between 500 ANd 2000;
 
 -- 8. Employee ID between 3 and 10.
-
+select * from employees where employee_id between 3 ANd 10;
 
 -- 9. Customer ID between 2 and 4.
+select * from customers where customer_id between 2 ANd 4;
+
 -- 10. Payment amount between 8000 and 20000.
+select * from payments where amount between 8000 AND 20000;
+
 -- 11. Salary NOT BETWEEN 40000 AND 70000.
+select * from employees where salary between 40000 AND 70000; 
+
 -- 12. Bonus BETWEEN 2000 AND 10000.
+select * from employees where bonus between 2000 ANd 10000;
+
 -- 13. Price BETWEEN 1000 AND 15000.
+select * from products where price between 1000 AND 15000;
+
 -- 14. Hire date BETWEEN Jan and Dec 2022.
+select * from employees where hire_date between "2022-01-01" AND "2022-12-31";
+
 -- 15. Stock BETWEEN 30 AND 100.
+select * from products where stock between 30 AND 100;
+
 -- 16. Order date BETWEEN Jan and Mar.
+
+
 -- 17. Product ID BETWEEN 2 AND 5.
 -- 18. Department ID BETWEEN 2 AND 5.
 -- 19. Job ID BETWEEN 2 AND 6.
