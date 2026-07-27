@@ -600,6 +600,8 @@ select * from products where stock between 20 AND 80;
 select * from employees where Commission Between 500 ANd 2000;
 
 -- 8. Employee ID between 3 and 10.
+
+
 -- 9. Customer ID between 2 and 4.
 -- 10. Payment amount between 8000 and 20000.
 -- 11. Salary NOT BETWEEN 40000 AND 70000.
