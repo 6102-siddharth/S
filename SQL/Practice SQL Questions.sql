@@ -624,12 +624,20 @@ select * from employees where hire_date between "2022-01-01" AND "2022-12-31";
 select * from products where stock between 30 AND 100;
 
 -- 16. Order date BETWEEN Jan and Mar.
-
+select * from orders where order_date between "2024-01-01" AND "2024-03-31";
 
 -- 17. Product ID BETWEEN 2 AND 5.
+select * from products where product_id between 2 AND 5;
+
 -- 18. Department ID BETWEEN 2 AND 5.
+select * from departments where department_id between 2 AND 5;
+
 -- 19. Job ID BETWEEN 2 AND 6.
+select * from jobs where job_id between 2 ANd 6;
+
 -- 20. Quantity BETWEEN 1 AND 5.
+select * from order_details where quantity between 1 AND 5;
+
 
 
 
