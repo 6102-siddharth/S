@@ -639,6 +639,31 @@ select * from jobs where job_id between 2 ANd 6;
 select * from order_details where quantity between 1 AND 5;
 
 
+-- 7. IN / NOT IN (20 Questions)
+
+-- 1. Department IN (2,3)
+
+
+-- 2. Department NOT IN (2,3)
+-- 3. Country IN ('USA','UK')
+-- 4. Category IN ('Furniture','Electronics')
+-- 5. Payment IN ('Cash','UPI')
+-- 6. Job IN (1,2)
+-- 7. Salary IN (45000,50000)
+-- 8. Employee ID IN (2,4,6)
+-- 9. Employee ID NOT IN (2,4,6)
+-- 10. Customer city IN(...)
+-- 11. Customer city NOT IN(...)
+-- 12. Product price IN(...)
+-- 13. Department name IN(...)
+-- 14. Status IN('Active')
+-- 15. Order ID IN(1,2,5)
+-- 16. Product ID NOT IN(...)
+-- 17. Gender IN('M')
+-- 18. Gender NOT IN('F')
+-- 19. Stock IN(...)
+-- 20. Country NOT IN(...)
+
 
 
 
