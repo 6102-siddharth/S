@@ -644,6 +644,7 @@ select * from order_details where quantity between 1 AND 5;
 -- 1. Department IN (2,3)
 
 
+
 -- 2. Department NOT IN (2,3)
 -- 3. Country IN ('USA','UK')
 -- 4. Category IN ('Furniture','Electronics')
