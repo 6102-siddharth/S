@@ -642,11 +642,15 @@ select * from order_details where quantity between 1 AND 5;
 -- 7. IN / NOT IN (20 Questions)
 
 -- 1. Department IN (2,3)
-
+select * from departments where Department_id In (2,3);
 
 
 -- 2. Department NOT IN (2,3)
+select * from departments where Department_id Not In (2,3);
+
 -- 3. Country IN ('USA','UK')
+select * from customers where country Not in ("USA","UK");
+
 -- 4. Category IN ('Furniture','Electronics')
 -- 5. Payment IN ('Cash','UPI')
 -- 6. Job IN (1,2)
