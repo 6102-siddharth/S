@@ -652,8 +652,14 @@ select * from departments where Department_id Not In (2,3);
 select * from customers where country Not in ("USA","UK");
 
 -- 4. Category IN ('Furniture','Electronics')
+select * from products where category in ("Furniture","Electronics");
+
 -- 5. Payment IN ('Cash','UPI')
+select * from Payments where payment_method In ("CASH","UPI");
+
 -- 6. Job IN (1,2)
+
+
 -- 7. Salary IN (45000,50000)
 -- 8. Employee ID IN (2,4,6)
 -- 9. Employee ID NOT IN (2,4,6)
