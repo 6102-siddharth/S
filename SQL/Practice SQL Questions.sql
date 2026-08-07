@@ -658,22 +658,48 @@ select * from products where category in ("Furniture","Electronics");
 select * from Payments where payment_method In ("CASH","UPI");
 
 -- 6. Job IN (1,2)
-
+select  * from jobs where Job_id in (1,2);
 
 -- 7. Salary IN (45000,50000)
+select * from employees where salary in (45000,50000);
+
 -- 8. Employee ID IN (2,4,6)
+select * from employees where Employee_id in(2,4,6);
+
 -- 9. Employee ID NOT IN (2,4,6)
+select * from employees where employee_id not in (2,4,6);
+
 -- 10. Customer city IN(...)
+-- select * from customers where City In (*);
+
 -- 11. Customer city NOT IN(...)
+-- select * from customers where city Not In();
+
 -- 12. Product price IN(...)
+select * from products where price;
+
 -- 13. Department name IN(...)
+
+
 -- 14. Status IN('Active')
+select * from employees where status In ( "Active"); 
+
 -- 15. Order ID IN(1,2,5)
+select * from orders where Order_Id In (1,2,5);
+
 -- 16. Product ID NOT IN(...)
+
+
 -- 17. Gender IN('M')
+select * from employees where gender In ("M");
+
 -- 18. Gender NOT IN('F')
+select * from employees where gender IN ("F");
+
 -- 19. Stock IN(...)
+
 -- 20. Country NOT IN(...)
+
 
 
 
