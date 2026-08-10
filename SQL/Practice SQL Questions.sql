@@ -765,6 +765,49 @@ select * from employees order by email asc;
 
 
 
+-- 9. LIMIT (20 Questions)
+
+-- 1. First employee.
+select * from employees order by employee_id asc limit 1;
+ 
+-- 2. First five employees.
+select * from employees order by employee_id limit 5;
+
+-- 3. Top three salaries.
+select * from employees order by salary desc limit 3;
+
+-- 4. Lowest salary.
+select * from employees order by salary asc limit 1;
+
+-- 5. First five products.
+select * from products order by product_name limit 5;
+
+-- 6. Last five products.
+select * from products order by product_name desc limit 5;
+
+-- 7. Highest priced product.
+select * from products 
+
+-- 8. Lowest priced product.
+-- 9. Top five orders.
+-- 10. Latest five hires.
+-- 11. First customer.
+-- 12. Top bonus.
+-- 13. Lowest stock.
+-- 14. First three payments.
+-- 15. Highest payment.
+-- 16. Lowest payment.
+-- 17. Second highest salary.
+-- 18. Third highest salary.
+-- 19. Fourth highest product.
+-- 20. Top ten employees.
+
+
+
+
+
+
+
 
 
 
