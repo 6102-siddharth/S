@@ -701,6 +701,68 @@ select * from employees where gender IN ("F");
 -- 20. Country NOT IN(...)
 
 
+-- 8. ORDER BY (20 Questions)
+
+-- 1. Salary ascending.
+select * from employees order by salary asc;
+
+-- 2. Salary descending.
+select * from employees order by salary desc;
+
+-- 3. Product price ascending.
+select * from products order by price asc;
+
+-- 4. Product price descending.
+select * from products order by price desc;
+
+-- 5. Employee name ascending.
+select * from employees order by first_name asc;
+
+-- 6. Customer name descending.
+select * from employees order by first_name desc;
+
+-- 7. Hire date ascending.
+select * from employees order by hire_date asc;
+
+-- 8. Hire date descending.
+select * from employees order by hire_date desc;
+
+-- 9. Bonus descending.
+select * from employees order by bonus desc;
+
+-- 10. Stock ascending.
+select * from products order by stock asc;
+
+-- 11. Order amount descending.
+select * from orders order by total_amount desc;
+
+-- 12. Department ascending.
+select * from departments order by department_name;
+
+-- 13. Job title ascending.
+select * from jobs order by job_title asc;
+
+-- 14. City descending.
+select * from customers order by city desc;
+
+-- 15. Category ascending.
+select * from products order by category asc;
+
+-- 16. Commission descending.
+select * from employees order by commission desc;
+
+-- 17. Payment date descending.
+select * from payments order by payment_date desc;
+
+-- 18. Employee ID descending.
+select * from employees order by employee_id desc;
+
+-- 19. Product name descending.
+select * from products order by product_name desc;
+
+-- 20. Email ascending.
+select * from employees order by email asc;
+
 
 
 
