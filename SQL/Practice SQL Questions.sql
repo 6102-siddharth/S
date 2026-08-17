@@ -786,16 +786,32 @@ select * from products order by product_name limit 5;
 select * from products order by product_name desc limit 5;
 
 -- 7. Highest priced product.
-select * from products 
+select * from products order by price desc limit 1;
 
 -- 8. Lowest priced product.
+select * from products order by price limit 1;
+
 -- 9. Top five orders.
+select * from orders order by total_amount desc limit 5;
+
 -- 10. Latest five hires.
+select * from employees order by hire_date desc limit 5;
+
 -- 11. First customer.
+select * from customers order by customer_name limit 1;
+
 -- 12. Top bonus.
+select * from employees order by bonus limit 1;
+
 -- 13. Lowest stock.
+select * from products order by stock limit 1;
+
 -- 14. First three payments.
+select * from payments order by  payment_date limit 3;
+
 -- 15. Highest payment.
+select * from payments order by amount limit 1;
+
 -- 16. Lowest payment.
 -- 17. Second highest salary.
 -- 18. Third highest salary.
