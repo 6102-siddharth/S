@@ -813,10 +813,23 @@ select * from payments order by  payment_date limit 3;
 select * from payments order by amount limit 1;
 
 -- 16. Lowest payment.
+select * from payments order by amount asc;
+
 -- 17. Second highest salary.
+select * from employees order by salary desc;
+select Max(salary) as second_Highest_salary from employees where salary < (select Max(salary) from employees);
+select distinct salary from employees order by salary desc limit 1 offset 1;
+
 -- 18. Third highest salary.
+select max(salary) from employees where salary < (select Max(salary) from employees ;
+select distinct salary from employees order by salary desc limit 1 offset 2;
+select * from employees order by salary desc;
+
 -- 19. Fourth highest product.
+select distinct salary from employees order by salary desc limit 1 offset 3;
+
 -- 20. Top ten employees.
+select * from employees order by salary desc limit 10;
 
 
 
