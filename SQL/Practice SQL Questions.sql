@@ -832,7 +832,30 @@ select distinct salary from employees order by salary desc limit 1 offset 3;
 select * from employees order by salary desc limit 10;
 
 
+-- 10. Aggregate Functions (20 Questions)
 
+-- 1. COUNT employees.
+
+
+-- 2. COUNT customers.
+-- 3. COUNT products.
+-- 4. SUM salary.
+-- 5. AVG salary.
+-- 6. MAX salary.
+-- 7. MIN salary.
+-- 8. SUM bonus.
+-- 9. AVG bonus.
+-- 10. MAX product price.
+-- 11. MIN product price.
+-- 12. COUNT departments.
+-- 13. COUNT orders.
+-- 14. SUM order amount.
+-- 15. AVG order amount.
+-- 16. MAX payment.
+-- 17. MIN payment.
+-- 18. AVG stock.
+-- 19. SUM stock.
+-- 20. COUNT females.
 
 
 
