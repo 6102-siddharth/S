@@ -821,7 +821,7 @@ select Max(salary) as second_Highest_salary from employees where salary < (selec
 select distinct salary from employees order by salary desc limit 1 offset 1;
 
 -- 18. Third highest salary.
-select max(salary) from employees where salary < (select Max(salary) from employees ;
+select max(salary) from employees where salary < (select Max(salary) from employees) ;
 select distinct salary from employees order by salary desc limit 1 offset 2;
 select * from employees order by salary desc;
 
@@ -834,28 +834,101 @@ select * from employees order by salary desc limit 10;
 
 -- 10. Aggregate Functions (20 Questions)
 
--- 1. COUNT employees.
+select * from customers;
+select * from departments;
+select * from employees;
+select * from jobs;
+select * from order_details;
+select * from orders;
+select * from payments;
+select * from products;
 
+-- 1. COUNT employees.
+select count(employee_id) as Total_COunts_EMployees from employees;
 
 -- 2. COUNT customers.
+select count(customer_id) from customers;
+
 -- 3. COUNT products.
+select count(product_id) Total_products from products;
+
 -- 4. SUM salary.
+select sum(salary) as TOtal_salary from employees ;
+
 -- 5. AVG salary.
+select avg(salary) as Average_salary from employees;
+
 -- 6. MAX salary.
+select max(salary) as Highest_salary from employees;
+
 -- 7. MIN salary.
+select min(salary) as Lowest_salary from employees;
+
 -- 8. SUM bonus.
+select sum(bonus) as Total_Bonus from employees;
+
 -- 9. AVG bonus.
+select avg(bonus) as AVG_BONUS from employees ;
+
 -- 10. MAX product price.
+select max(price) as Highest_Price from products;
+
 -- 11. MIN product price.
+select min(price) as lowest_price from products;
+
 -- 12. COUNT departments.
+select count(department_id) from departments;
+
 -- 13. COUNT orders.
+select count(order_id) as Total_orders from orders;
+
 -- 14. SUM order amount.
+select sum(total_amount) as Total_orderamount from orders;
+
 -- 15. AVG order amount.
+select avg(total_amount) as avg_amount from orders;
+
 -- 16. MAX payment.
+select max(amount)as Highest_Amount from payments;
+
 -- 17. MIN payment.
+select min(amount) as lowest_payment from payments;
+
 -- 18. AVG stock.
+select avg(stock) as avg_stock from products;
+
 -- 19. SUM stock.
+select sum(stock) as Total_Stock from products;
+
 -- 20. COUNT females.
+select count(gender="f") from employees;
+
+
+-- 11. GROUP BY (20 Questions)
+
+-- 1. Total employees in each department.
+
+
+-- 2. Average salary by department.
+-- 3. Maximum salary by department.
+-- 4. Minimum salary by department.
+-- 5. Total bonus by department.
+-- 6. Count employees by gender.
+-- 7. Count products by category.
+-- 8. Average product price by category.
+-- 9. Orders by employee.
+-- 10. Orders by customer.
+-- 11. Payments by method.
+-- 12. Products by stock category.
+-- 13. Employees by job.
+-- 14. Average commission.
+-- 15. Department salary total.
+-- 16. Country-wise customers.
+-- 17. City-wise customers.
+-- 18. Employee count by status.
+-- 19. Product count by price.
+-- 20. Payment count.
+
 
 
 
