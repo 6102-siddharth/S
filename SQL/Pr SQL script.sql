@@ -907,9 +907,14 @@ select count(gender="f") from employees;
 -- 11. GROUP BY (20 Questions)
 
 -- 1. Total employees in each department.
+select count(*) as Emp_counts, d.department_id,department_name from departments as d join employees as e
+on d.department_id = e.department_id 
+group by department_name ;
 
 
 -- 2. Average salary by department.
+
+
 -- 3. Maximum salary by department.
 -- 4. Minimum salary by department.
 -- 5. Total bonus by department.
