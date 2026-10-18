@@ -913,11 +913,42 @@ group by department_name ;
 
 
 -- 2. Average salary by department.
+select avg(salary) as AVG_Salary,department_id from employees 
+group by department_id ;
 
+-- Same Question by JOins
+select avg(salary) as Avg_salary ,d.department_id, d.department_name from employees as e join departments as d 
+on d.department_id = e.department_id
+group by department_name;
 
 -- 3. Maximum salary by department.
+select max(salary) as Highest_salary, department_id from employees 
+group by department_id order by highest_salary desc;
+
+-- Same by Join
+
+select max(salary) as Highest_salary , d.department_id, department_name
+from employees e join departments d
+on e.department_id = d.department_id
+group by department_id, department_name
+order by Highest_salary desc; 
+
 -- 4. Minimum salary by department.
+select min(salary) as Minimum_salary , department_id from employees 
+group by department_id order by minimum_salary asc;
+
+select * from employees;
+-- By using joins
+
+-- select min(salary) as Lowest_salary ,d.department_id, department_name 
+-- from employees e join departments d
+-- on e.department_id =e.department_id
+-- group by department_id , department_name;
+
 -- 5. Total bonus by department.
+select sum(bonus) as TOtal_bonus , department_id from employees 
+group by department_id;
+
 -- 6. Count employees by gender.
 -- 7. Count products by category.
 -- 8. Average product price by category.
