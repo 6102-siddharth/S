@@ -949,8 +949,13 @@ select * from employees;
 select sum(bonus) as TOtal_bonus , department_id from employees 
 group by department_id;
 
+USE company_db;
 -- 6. Count employees by gender.
+select * from employees;
+select count(employee_id) as counts , gender from employees group by gender;
+
 -- 7. Count products by category.
+
 -- 8. Average product price by category.
 -- 9. Orders by employee.
 -- 10. Orders by customer.
