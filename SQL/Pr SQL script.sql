@@ -956,6 +956,10 @@ select count(employee_id) as counts , gender from employees group by gender;
 
 -- 7. Count products by category.
 
+
+
+
+
 -- 8. Average product price by category.
 -- 9. Orders by employee.
 -- 10. Orders by customer.
