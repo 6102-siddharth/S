@@ -955,17 +955,31 @@ select * from employees;
 select count(employee_id) as counts , gender from employees group by gender;
 
 -- 7. Count products by category.
-
-
-
-
+select  category ,count(product_name) from products 
+group by category;
 
 -- 8. Average product price by category.
+select category , avg(price) from products
+group by category;
+select * from products;
+
 -- 9. Orders by employee.
+select concat(first_name, last_name) as Emp_name from employees order by Emp_name asc;
+
 -- 10. Orders by customer.
+select * from customers order by customer_name;
+
 -- 11. Payments by method.
+select * from payments;
+select payment_method , count(Payment_method) from payments group by payment_method;
+
 -- 12. Products by stock category.
+select category, count(product_name) 
+from products group by category
+
 -- 13. Employees by job.
+
+
 -- 14. Average commission.
 -- 15. Department salary total.
 -- 16. Country-wise customers.
